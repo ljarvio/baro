@@ -1,0 +1,12 @@
+// delete matching line in multiple files
+find sectoren/ -name "index.html" | xargs sed -i "/src=\"helpers.js/d"
+
+// replace matching expression in multiple files
+find sectoren/melkvee/ -name "plot.js" | xargs sed -i "s/title: 'x 1000 euro'/title: 'x 1.000 euro'/g"
+
+// or tweak the color palette in a certain plot type
+find sectoren/*/opbrengsten-en-kosten/ -name "plot.js" | 
+xargs sed -i "s/colors: \['#333', '#69B0E1', '#ED7301', '#C2BBB1',  '#35992A'\]/colors: \['#444', '#69B0E1', '#ED7301', '#C2BBB1',  '#35992A'\]/g"
+
+// add script include after match
+find . -name "index.html" | xargs sed -i "/jsapi/a\    <script type=\'text/javascript\' src=\'../googlecharts.js\'></script>"   

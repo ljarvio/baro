@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <title>
+      Combo chart
+    </title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="plot.js"></script>
+	<script type="text/javascript" src="helpers.js"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['controls', 'corechart'], 'language': 'nl'});
+      google.setOnLoadCallback(drawVisualization); // drawVisualization() @ plot.js
+    </script>
+	<style type="text/css">
+		form input {
+			margin-left:8px;
+		}
+		
+		#t1 {
+			font-size: 9pt;
+			font-family: 'Verdana';
+			margin:0 auto;
+			background: transparent;
+		}
+		#chart_container {
+			width: 500px; 
+			height: 325px;
+		}
+		
+		
+	</style>
+  </head>
+  <body>
+  
+  <table id='t1'>
+  <tr>
+  <td><label id="checkboxLabel" ></label></td>
+  <td><form id="checkboxForm"></form></td>
+  </tr>
+  <tr>
+  <td colspan="2"><div id="chart_container"></div></td>
+  </tr>
+  </table>
+  </body>
+</html>
