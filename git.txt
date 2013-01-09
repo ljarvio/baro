@@ -1,0 +1,3 @@
+push repo to GitHub:
+path/to/baro (master) $ git remote add other git@github.com:ljarvio/baro.git
+path/to/baro (master) $ git push -u other master
